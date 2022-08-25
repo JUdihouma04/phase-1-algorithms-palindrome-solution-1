@@ -1,25 +1,42 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+	const loweredWord = word.toLowerCase().split("");
+	const reversedWord = loweredWord.reverse().join("");
+
+	if (word === reversedWord) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 /* 
-  Add your pseudocode here
+  Create a function
+  receives an argument
+  Reverse the string
+  Join the string
+  if sting === reversed string
+    return true
+    if not
+    return false
 */
 
 /*
-  Add written explanation of your solution here
+  Create a function that returns true is the word is a palindrome and false
+  if not, meaning if the word is the same in reverse it should return true
+   abba === abba //true
+   abc === cba //false
 */
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
-  console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
+	// add your own custom tests in here
+	console.log("Expecting: true");
+	console.log("=>", isPalindrome("racecar"));
 
-  console.log("");
+	console.log("");
 
-  console.log("Expecting: false");
-  console.log("=>", isPalindrome("robot"));
+	console.log("Expecting: false");
+	console.log("=>", isPalindrome("robot"));
 }
 
 module.exports = isPalindrome;
